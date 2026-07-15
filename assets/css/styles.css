@@ -1190,9 +1190,36 @@ main {
     transition: all 0.3s ease-in-out;
 }
 
+.footer-links ul li a:hover {
+    opacity: 1;
+}
+
 .footer-logo img {
     height: 24px;
     width: auto;
+}
+
+/* Promo Codes Page */
+.promo-hero {
+    padding: 40px 0;
+}
+
+.promo-hero__content {
+    text-align: center;
+}
+
+.promo-hero__heading {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 60px;
+    text-transform: capitalize;
+}
+
+.promo-hero__desc {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1325,6 +1352,13 @@ main {
     .footer-menus ul {
         gap: 20px;
     }
+
+    /* Promo Codes PAGE */
+    .promo-hero__heading {
+        font-size: 48px;
+        line-height: 1.25;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1639,5 +1673,19 @@ main {
 
     .footer-site .footer-deco img {
         width: 100%;
+    }
+
+    /* Promo Codes PAGE */
+    .promo-hero {
+        padding: 32px 0;
+    }
+
+    .promo-hero__heading {
+        font-size: 36px;
+    }
+
+    .promo-hero__desc {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
