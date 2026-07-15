@@ -172,7 +172,7 @@ main {
 
 .site-nav li a {
     opacity: 0.4;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .site-nav li {
@@ -1077,7 +1077,7 @@ main {
 
 .footer-site .footer-deco {
     position: absolute;
-    top: 32px;
+    top: -32px;
     right: 0;
     pointer-events: none;
     display: flex;
@@ -1099,6 +1099,7 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 48px;
+    flex-wrap: wrap;
 }
 
 .footer-left,
@@ -1109,6 +1110,17 @@ main {
     gap: 80px;
 }
 
+.footer-left {
+    width: calc(65% - 24px);
+}
+
+.footer-right {
+    width: calc(35% - 24px);
+}
+
+.footer-right {
+    align-items: end;
+}
 
 .footer-title {
     font-weight: 600;
@@ -1124,15 +1136,17 @@ main {
     padding-bottom: 16px;
 }
 
-.footer-btn {
+.footer-site .footer-btn {
     padding: 8px 32px;
     font-size: 16px;
+    line-height: 20px;
 }
 
 .footer-menus ul {
     list-style: none;
     display: flex;
-    gap: 32px;
+    gap: 16px 32px;
+    flex-wrap: wrap;
 }
 
 .footer-menus ul li a {
@@ -1174,6 +1188,11 @@ main {
     letter-spacing: 0%;
     opacity: 0.4;
     transition: all 0.3s ease-in-out;
+}
+
+.footer-logo img {
+    height: 24px;
+    width: auto;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1301,6 +1320,10 @@ main {
 
     .faq-heading {
         font-size: 34px;
+    }
+
+    .footer-menus ul {
+        gap: 20px;
     }
 }
 
@@ -1566,5 +1589,55 @@ main {
     .faq-question .faq-title {
         font-size: 16px;
         line-height: 22px;
+    }
+
+    .footer-left,
+    .footer-right {
+        gap: 24px;
+        width: 100%;
+    }
+
+
+    .footer-site {
+        padding: 24px 0;
+    }
+
+    .footer-title {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .footer-btn {
+        width: 100%;
+    }
+
+    .footer-menus ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .footer-content {
+        gap: 80px;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+
+    .footer-site .footer-deco {
+        top: 64px;
+        left: -50px;
+        right: -50px;
+    }
+
+    .footer-site .footer-deco img {
+        width: 100%;
     }
 }
