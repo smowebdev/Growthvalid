@@ -907,6 +907,274 @@ main {
     width: 100%;
 }
 
+.gambling-sites-overview-sec {
+    padding-bottom: 80px;
+}
+
+.gambling-sites-overview-sec .container {
+    max-width: 1280px;
+}
+
+.gambling-sites-overview-sec .title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 6px 0;
+    margin-bottom: 24px;
+
+}
+
+.gambling-sites-overview-sec .desc {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+}
+
+.gambling-sites-overview-sec .overview-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.faq-section {
+    background-color: #F8F5F3;
+    padding: 40px 0 80px;
+}
+
+.faq-section .container {
+    max-width: 1280px;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    margin-bottom: 28px;
+}
+
+.faq-subheading {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: radial-gradient(52.82% 244.64% at 50% 50%, #FF3838 0%, #FA7603 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.faq-heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    padding: 6px 0;
+    text-transform: capitalize;
+}
+
+.faq-desc {
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+
+}
+
+.faq-question .faq-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.faq-toggle {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #F1F3F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.faq-toggle img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    transition: opacity .25s ease;
+}
+
+.faq-open {
+    opacity: 1;
+    width: 16px;
+}
+
+.faq-close {
+    opacity: 0;
+}
+
+.faq-item.active .faq-open {
+    opacity: 0;
+}
+
+.faq-item.active .faq-close {
+    opacity: 1;
+}
+
+.faq-item.active .faq-toggle {
+    background: radial-gradient(52.82% 244.64% at 50% 50%, #FF3838 0%, #FA7603 100%);
+
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 24px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-site {
+    background: #000;
+    min-height: 356px;
+    overflow: hidden;
+    padding: 64px 0;
+    color: #fff;
+}
+
+.footer-site .footer-deco {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    pointer-events: none;
+    display: flex;
+}
+
+.footer-inner {
+    max-width: 1512px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-site .footer-deco img {
+    width: 576px;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+
+.footer-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+.footer-desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 16px;
+}
+
+.footer-btn {
+    padding: 8px 32px;
+    font-size: 16px;
+}
+
+.footer-menus ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.footer-menus ul li a {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    gap: 6px;
+    text-decoration: none;
+    opacity: 0.4;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-menus ul li a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.footer-menus ul li a:hover {
+    opacity: 1;
+}
+
+.footer-menus ul li.current-menu-item a {
+    opacity: 1;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.footer-links ul li a {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    opacity: 0.4;
+    transition: all 0.3s ease-in-out;
+}
 
 @media screen and (max-width: 1200px) {
     .top-sites__list {
@@ -972,6 +1240,17 @@ main {
         height: 60px;
         background-color: #fff;
         border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+        box-shadow: 0px 0px 1px 0px rgba(2, 2, 3, 0.1),
+            0px 1px 1px 0px rgba(2, 2, 3, 0.05),
+            0px 2px 2px 0px rgba(2, 2, 3, 0.03),
+            0px 4px 2px 0px rgba(2, 2, 3, 0.01);
+    }
+
+    .site-card.site-card-highlight .site-card__score-mb {
+        border-color: transparent;
+        box-shadow: none;
+
     }
 
     .site-card__score-mb span {
@@ -1014,6 +1293,15 @@ main {
     .all-sites-content__tabs {
         justify-content: stretch;
     }
+
+    .gambling-sites-overview-sec .title {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    .faq-heading {
+        font-size: 34px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1023,6 +1311,10 @@ main {
 
     .on-mb {
         display: block;
+    }
+
+    .wrap-header-mobile {
+        min-height: calc(100dvh - 65px);
     }
 
     .site-logo {
@@ -1224,5 +1516,55 @@ main {
 
     .site-card.site-card-highlight {
         margin-top: 36px;
+    }
+
+    .gambling-sites-overview-sec .title {
+        font-size: 32px;
+        line-height: 1.375;
+        padding: 0;
+        margin-bottom: 16px;
+    }
+
+    .gambling-sites-overview-sec .desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .gambling-sites-overview-sec {
+        padding-bottom: 60px;
+    }
+
+    .faq-section {
+        padding: 20px 0 60px;
+    }
+
+    .faq-heading {
+        font-size: 32px;
+        line-height: 44px;
+        padding: 0;
+    }
+
+    .faq-desc {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .faq-header {
+        margin-bottom: 24px;
+    }
+
+    .faq-question {
+        padding: 20px;
+    }
+
+    .faq-answer {
+        padding: 0 20px 20px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .faq-question .faq-title {
+        font-size: 16px;
+        line-height: 22px;
     }
 }

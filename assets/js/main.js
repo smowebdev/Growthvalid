@@ -61,4 +61,30 @@ jQuery(document).ready(function ($) {
     );
   });
   // Sites Tab - End
+
+  // FAQ - Start
+  const $firstFaq = $(".faq-item").first();
+
+  $firstFaq.addClass("active");
+  $firstFaq.find(".faq-answer").slideDown(0);
+
+  $(".faq-question").on("click", function () {
+    const $item = $(this).closest(".faq-item");
+    const $answer = $item.find(".faq-answer");
+
+    if ($item.hasClass("active")) {
+      $item.removeClass("active");
+      $answer.stop(true, true).slideUp(300);
+    } else {
+      $(".faq-item.active")
+        .removeClass("active")
+        .find(".faq-answer")
+        .stop(true, true)
+        .slideUp(300);
+
+      $item.addClass("active");
+      $answer.stop(true, true).slideDown(300);
+    }
+  });
+  // FAQ - End
 });
