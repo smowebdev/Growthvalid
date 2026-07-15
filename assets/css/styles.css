@@ -66,9 +66,6 @@ body.menu-open {
     overflow: hidden;
 }
 
-main {
-    min-height: 100vh;
-}
 
 .on-pc {
     display: block;
