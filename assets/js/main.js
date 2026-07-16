@@ -87,4 +87,73 @@ jQuery(document).ready(function ($) {
     }
   });
   // FAQ - End
+
+  // Table Of Content - Start
+  const $singleContent = $(".single-article");
+  const $singleToc = $(".single-toc__list");
+
+  const $singleHeadings = $singleContent.find("h2");
+
+  if (!$singleHeadings.length) {
+    $(".single-toc").hide();
+    return;
+  }
+
+  $singleHeadings.each(function (index) {
+    const $heading = $(this);
+
+    let id = $heading.attr("id");
+
+    if (!id) {
+      id = "heading-" + (index + 1);
+      $heading.attr("id", id);
+    }
+
+    $singleToc.append(`
+            <li>
+                <a href="#${id}">
+                    ${$heading.text()}
+                </a>
+            </li>
+        `);
+  });
+
+  const $singleTocLinks = $singleToc.find("a");
+  $singleTocLinks.on("click", function (e) {
+    e.preventDefault();
+
+    $singleToc.find("li").removeClass("active");
+    $(this).parent("li").addClass("active");
+
+    const target = document.querySelector($(this).attr("href"));
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+
+  function updateTOC() {
+    const scrollTop = $(window).scrollTop() + 160;
+
+    let currentId = $singleHeadings.first().attr("id");
+
+    $singleHeadings.each(function () {
+      if ($(this).offset().top <= scrollTop) {
+        currentId = $(this).attr("id");
+      }
+    });
+
+    $singleToc.find("li").removeClass("active");
+    $singleTocLinks
+      .filter(`[href="#${currentId}"]`)
+      .parent("li")
+      .addClass("active");
+  }
+
+  updateTOC();
+
+  $(window).on("scroll", updateTOC);
+
+  // Table Of Content - End
 });
